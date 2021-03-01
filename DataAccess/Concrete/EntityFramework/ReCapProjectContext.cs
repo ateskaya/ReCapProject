@@ -12,7 +12,7 @@ namespace DataAccess.Concrete
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ReCapProject;Trusted_Connection=true");
         }
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<Car> Cars2 { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
     }
