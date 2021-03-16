@@ -18,5 +18,6 @@ namespace DataAccess.Concrete
         public DbSet<Car> Cars2 { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<CarImage> CarImages { get; set; }
     }
 }

@@ -38,11 +38,6 @@ namespace DataAccess.Concrete
             _cars.Remove(productToDelete);
         }
 
-        public List<Car> GetAll()
-        {
-            return _cars;
-        }
-
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
             throw new NotImplementedException();
@@ -59,6 +54,11 @@ namespace DataAccess.Concrete
         }
 
         public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<CarDetailDto> GetCarDetails(Expression<Func<Car, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
