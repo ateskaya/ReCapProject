@@ -48,7 +48,7 @@ namespace DataAccess.Concrete
             return _cars.Where(p => p.BrandId == brandId).ToList();
         }
 
-        public Car GetById(Expression<Func<Car, bool>> filter)
+        public Car Get(Expression<Func<Car, bool>> filter)
         {
             throw new NotImplementedException();
         }

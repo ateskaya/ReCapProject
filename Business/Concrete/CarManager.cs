@@ -1,5 +1,5 @@
 ﻿using Business.Abstract;
-using Business.Contants;
+using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingconcerns.Validation;
@@ -44,7 +44,7 @@ namespace Business.Concrete
 
         public IDataResult<Car> GetById(int id)
         {
-            return new SuccessDataResult<Car>(_carDal.GetById(c=>c.Id==id));
+            return new SuccessDataResult<Car>(_carDal.Get(c=>c.Id==id));
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()

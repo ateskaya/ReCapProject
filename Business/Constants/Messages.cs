@@ -1,0 +1,45 @@
+﻿using Core.Entities.Concrete;
+using Entities.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+
+namespace Business.Constants
+{
+    public static class Messages
+    {
+        public static string CarAdded = "Araba Eklendi.";
+        public static string DailyPriceİnvalid = "Günlük Fiyat Sıfırdan Büyük Olmalı.";
+        public static string Descriptionİnvalid = "En az iki karakter girmelisin.";
+        public static string CarListed = "Arabalar Listelendi.";
+        public static string ListError = "Listelenemedi.Sistem Bakımda.";
+        public static string CarDeleted = "Silindi.";
+        public static string CarUpdate = "Güncellendi.";
+        public static string ColorAdded = "Renk Eklendi.";
+        public static string BrandAdded = "Marka Eklendi.";
+        public static string BrandUpdated = "Marka Güncellendi.";
+        public static string BrandDeleted = "Marka Silindi.";
+        public static string ColorUpdated = "Renk Güncellendi.";
+        public static string ColorDeleted = "Renk Silindi.";
+        public static string ColorListed = "Renk Listelelendi.";
+        public static string BrandListed = "Marka Listelendi.";
+        public static string CustomerAdded = "Kullanıcı Eklendi.";
+        public static string Added = "Eklendi.";
+        public static string Deleted = "Silindi.";
+        public static string Updated = "Güncellendi.";
+        public static string RentInvalid = "Kiralama Başarısız.";
+        public static string ReturnDate = "Araç Teslim Edilmemiş.";
+        public static string AuthorizationDenied = "Yetkiniz Yok.";
+        public static string UserRegistered = "Kullanıcı Kaydı Başarılı.";
+        public static string UserNotFound = "Kullanıcı Bulunamadı.";
+        public static string PasswordError = "Parola Hatası.";
+        public static string SuccessfulLogin = "Başarılı Giriş.";
+        public static string UserAlreadyExists = "Kullanıcı Mevcut.";
+        public static string AccessTokenCreated = "Token Oluşturuldu.";
+        public static string CarImageLimitExceeded = "Daha fazla araba resmi yükleyemezsiniz.";
+
+        public static string CarImageAdded { get; internal set; }
+        public static string ImagesLimit { get; internal set; }
+    }
+}
