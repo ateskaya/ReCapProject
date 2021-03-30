@@ -11,10 +11,10 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarController : ControllerBase
+    public class CarsController : ControllerBase
     {
         ICarService _carService;
-        public CarController(ICarService carService)
+        public CarsController(ICarService carService)
         {
             _carService = carService;
         }
@@ -104,6 +104,18 @@ namespace WebAPI.Controllers
             {
                 return Ok(result.Message);
             }
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("transaction")]
+        public IActionResult TransactionTest(Car car)
+        {
+            var result = _carService.AddTransactionalTest(car);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+
             return BadRequest(result.Message);
         }
 

@@ -2,6 +2,7 @@
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
+using Core.Aspects.Caching;
 using Core.CrossCuttingconcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -29,6 +30,11 @@ namespace Business.Concrete
 
             _carDal.Add(car);
             return new SuccessResult(Messages.CarAdded);
+        }
+
+        public IResult AddTransactionalTest(Car car)
+        {
+            throw new NotImplementedException();
         }
 
         public IResult Delete(Car car)
